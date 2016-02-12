@@ -1,0 +1,7 @@
+import numpy as np
+
+a=np.nan()
+b=20
+c=30
+
+print np.average([a,b,c,])

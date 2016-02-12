@@ -1,0 +1,21 @@
+def write_to_latex(filename,subfigure,directory):	#function for writing latex code for including image in document to file                   
+	import os,sys
+	
+	if not os.path.exists("latex_files/"):
+		os.makedirs("latex_files/")
+	outfile=open("latex_files/%s"%filename,'a')
+	outfile.write("%segin{figure}\n\includegraphics[width=0.8%sextwidth]{%s}\n"%(r"\b",r"\t",directory))
+	outfile.write("\caption{}\n\end{figure}")
+	outfile.close()
+#	begin{figure}
+#	
+#	\begin{subfigure}[h]{0.6\textwidth}
+#			\hspace{-30pt}
+#			\includegraphics[width=\textwidth]{figures/c_aleutians/Fo_90.png}
+#			\caption{\label{c_aleutians_fo90_mf}}
+#	\end{subfigure}
+#	\begin{subfigure}[h]{0.6\textwidth}
+#			\hspace{-30pt}
+#			\includegraphics[width=\textwidth]{figures/c_aleutians/Fo_91.png}
+#			\caption{\label{c_aleutians_fo91_mf}}
+#	\end{subfigure}
