@@ -1,0 +1,31 @@
+\begin{thebibliography}{3}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Kelley et~al.(2010)Kelley, Plank, Newman, Stolper, Grove, Parman, and
+  Hauri]{kelley2010mantle}
+Katherine~A Kelley, Terry Plank, Sally Newman, Edward~M Stolper, Timothy~L
+  Grove, Stephen Parman, and Erik~H Hauri.
+\newblock Mantle melting as a function of water content beneath the mariana
+  arc.
+\newblock \emph{Journal of Petrology}, page egq036, 2010.
+
+\bibitem[Schiano(2003)]{schiano2003primitive}
+Pierre Schiano.
+\newblock Primitive mantle magmas recorded as silicate melt inclusions in
+  igneous minerals.
+\newblock \emph{Earth-Science Reviews}, 63\penalty0 (1):\penalty0 121--144,
+  2003.
+
+\bibitem[Shaw et~al.(2008)Shaw, Hauri, Fischer, Hilton, and
+  Kelley]{shaw2008hydrogen}
+AM~Shaw, EH~Hauri, TP~Fischer, DR~Hilton, and KA~Kelley.
+\newblock Hydrogen isotopes in mariana arc melt inclusions: Implications for
+  subduction dehydration and the deep-earth water cycle.
+\newblock \emph{Earth and Planetary Science Letters}, 275\penalty0
+  (1):\penalty0 138--145, 2008.
+
+\end{thebibliography}

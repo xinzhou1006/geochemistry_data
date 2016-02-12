@@ -1,0 +1,101 @@
+import numpy as np
+import sys
+import os
+import matplotlib.pyplot as plt
+sys.path.insert(0, '/data/ap4909/30.10.2013-hot_cold_geochem/mantle_temp_cals/calculate_p_t_using_lee/aux_files')
+def fcpx_out(P,comp):
+			
+			#print comp
+			Mcpx=comp["cpx"]
+				
+			#r0=0.446
+			
+			r0=0.45	
+			r1=0.08
+			return Mcpx/(r0+r1*P)
+def katz_mf_new(mg_num,cpx_mode,cond,h2o):	#calculates melt fraction as in Katz 2003. props_name=mineralogy of mantle 
+			cpx_mode=0.15
+			from scipy.optimize import fsolve
+			import katz_melt_frac
+			mg_nums=[0.893419654,0.9010621194,0.9184344261]
+			A_vals=[1085.7,1122.65,1159.6]
+			
+			if cond[0]!=0.0 or cond[1]!=0.0:# if not an empty P,T,H2O estimate in file
+				A_val=1085.7
+				
+				x0=fsolve(katz_melt_frac.mf_root_finding,0,(cond[1],cond[0],h2o,A_val))[0]
+				
+				if x0==0:
+					print "Katz_melt_frac_error",cond[1],cond[0],h2o,mg_num
+					
+		
+				if x0>fcpx_out(cond[1],{"cpx":cpx_mode}):
+					
+					x0=katz_melt_frac.mf_opx(cond[1],cond[0],fcpx_out(cond[1],{"cpx":cpx_mode}),h2o,A_val)
+			else:
+				return 0.0
+			return x0
+def kelley_mf_arc(props_name,cond,h2o):#finds melt fraction using eqn 4 from kelley 2010. cond in format [T,P], using the more "refractory" constants
+			import math
+			a=-5.1404654
+			b=132.899012
+			
+			if cond[0]!=0.0 or cond[1]!=0.0:# if not an empty P,T,H2O estimate in file
+				
+				c=1159.66061#value from kelley 2010
+				x=-136.88
+				y=332.01
+		
+			else:
+				return 0.0
+			print  cond[1],math.log(cond[1])
+			return (-60.0*h2o**(1./1.85)-cond[0]+(a*cond[1]**2+b*cond[1]+c))/(-1*(x*math.log(cond[1])+y))
+
+def kelley_mf_arc_with_cpx_out(props_name,cond,h2o):#finds melt fraction using eqn 4 from kelley 2010. cond in format [T,P], using the more "refractory" constants
+			import math
+			
+			import katz_melt_frac
+			a=-5.1404654
+			b=132.899012
+			
+			
+				
+			c=1159.66061#value from kelley 2010
+			x=-136.88
+			y=332.01
+		
+			print  cond[1],math.log(cond[1])
+			x0= (-60.0*h2o**(1./1.85)-cond[0]+(a*cond[1]**2+b*cond[1]+c))/(-1*(x*math.log(cond[1])+y))
+			if x0>0.1:
+					
+				x0=katz_melt_frac.mf_opx(cond[1],cond[0],0.1,h2o,1159)
+			
+			return x0
+
+temps=np.linspace(1000,1600,1000)
+for P,col in zip([1,2,3],['b','r','g']):
+	katz_frac=[]
+	kelley_frac=[]
+	kelley_frac_with_cpx_out=[]
+	for T in temps:
+		katz_frac.append(katz_mf_new(0.9,0.15,[T,P],4))
+		kelley_frac.append(kelley_mf_arc(0.9,[T,P],4))
+		kelley_frac_with_cpx_out.append(kelley_mf_arc_with_cpx_out(0.9,[T,P],4))
+	plt.plot(temps,katz_frac,label="% GPa Katz"%P,color=col)
+	plt.plot(temps,kelley_frac,"--",label="% GPa Kelley"%P,color=col)
+	#plt.plot(temps,kelley_frac_with_cpx_out,"-.",label="%GPa Kelley with cpx out"%P)
+plt.ylim(0,1)
+
+fig1=plt.gcf()
+fig1.set_size_inches(16, 12)
+directory="figures/"#+"%s"%(comp.replace("=","_")) #%(sub_zone,comp.replace("=","_"))
+plt.tick_params(axis='both', which='major', labelsize=10)
+if not os.path.exists(directory):
+		os.makedirs(directory)
+
+plt.legend()
+print directory
+plt.show()
+fig1.savefig("%skatz_kelley_comparison.png"%(directory),bbox_inches='tight',dpi=(149))
+
+		

@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: kelley_comparison.aux
+The style file: plainnat.bst
+Database file #1: /home/ap4909/Dropbox/PhD/ongoing_results/2015_ongoing_results/seismic.bib
+Database file #2: /home/ap4909/Dropbox/PhD/ongoing_results/2015_ongoing_results/geochemistry.bib
+Database file #3: /home/ap4909/Dropbox/PhD/ongoing_results/2015_ongoing_results/geodynamics.bib
+You've used 3 entries,
+            2773 wiz_defined-function locations,
+            616 strings with 5741 characters,
+and the built_in function-call counts, 1788 in all, are:
+= -- 155
+> -- 124
+< -- 2
++ -- 42
+- -- 39
+* -- 152
+:= -- 276
+add.period$ -- 9
+call.type$ -- 3
+change.case$ -- 22
+chr.to.int$ -- 3
+cite$ -- 6
+duplicate$ -- 75
+empty$ -- 122
+format.name$ -- 42
+if$ -- 369
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 3
+newline$ -- 23
+num.names$ -- 12
+pop$ -- 42
+preamble$ -- 1
+purify$ -- 19
+quote$ -- 0
+skip$ -- 67
+stack$ -- 0
+substring$ -- 68
+swap$ -- 16
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 33
+warning$ -- 0
+while$ -- 14
+width$ -- 0
+write$ -- 46

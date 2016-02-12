@@ -1,0 +1,343 @@
+####################################################################
+#Plot melt fraction estimate using Kelley 2006 equation instead of Katz
+####################################################################
+import numpy as np
+import matplotlib.pyplot as plt
+import heapq
+import operator
+import sys
+import os
+import pdb
+import matplotlib as mpl
+
+sys.path.insert(0, '/data/ap4909/30.10.2013-hot_cold_geochem/mantle_temp_cals/calculate_p_t_using_lee/aux_files')
+import pet_read_in_with_labels
+import katz_melt_frac,fractionate,line_intersection
+mineral_props={"Fo=92":{"ol":0.65,"opx":0.3,"cpx":0.05},"Fo=91":{"ol":0.65,"opx":0.25,"cpx":0.1},"Fo=90":{"ol":0.65,"opx":0.2,"cpx":0.15}}	#mineral proportions for fo90,fo91,fo92 mantle
+mant_vals={"Fo=92":{"Y":3.129,"La":0.134,"Ti":650.0},"Fo=91":{"Y":3.328,"La":0.192,"Ti":716.3},"Fo=90":{"Y":3.548,"La":0.253,"Ti":792.0}}#mantle concentrations for DDMM, Ave DMM and enriched DMM from workman and Hart 2005
+from scipy.optimize import fsolve
+import samples_to_use
+from shapely.geometry import LineString
+
+mg_num_pressures={1:[0.893419654, 0.8939711286, 0.8947333745, 0.8955833832, 0.8965132211, 0.8977497991, 0.9010621194, 0.9046779485, 0.9068739487, 0.9083730847, 0.9122724521, 0.9163512318, 0.9184344261, 0.9289337253720003],2:[0.893419654,0.8946631348,0.8958661911,0.8971594463,0.8997587134,0.9030800356,0.9065112616,0.9101533627,0.9143320171,0.9183456819,0.9225677704,0.9251762166,0.9296685406111111],3:[0.893419654, 0.8948892454, 0.896325929, 0.8977307977, 0.9004492264, 0.9042174011, 0.9078788702, 0.9115185463, 0.9156145063, 0.9198119194, 0.923737173, 0.927344753, 0.9303134612, 0.9308657790046512]}
+mf_pressures={1:[0.000,0.020,0.040,0.061,0.079,0.100,0.151,0.201,0.231,0.251,0.299,0.349,0.374,0.5],2:[0.000,0.022,0.040,0.061,0.100,0.149,0.199,0.248,0.299,0.348,0.402,0.438,0.5],3:[0.000,0.020,0.041,0.060,0.099,0.151,0.201,0.252,0.299,0.351,0.400,0.449,0.492,0.5]}
+h2o_colours={0:'r',2:'y',4:'c',6:'g',8:'b'}
+mg_nums=[0.893419654,0.8939711286,0.8947333745,0.8955833832,0.8965132211,0.8977497991,0.9010621194,0.9046779485,0.9068739487,0.9083730847,0.9122724521,0.9163512318,0.9184344261]
+mf=[0.000,0.020,0.040,0.061,0.079,0.100,0.151,0.201,0.231,0.251,0.299,0.349,0.374]
+island_symbols={"Agrigan":".","Almagan":"v","Anatahan":"8","Asuncion":"s","Guguan":"D","Pagan":'p',"Sarigan":"*","Uracas":"o"}#symbols for each island
+
+pre_P=0.99
+lee_residues=[0.9,0.91,0.92]
+mantle_conc=1205
+slop=0.005
+
+def batch_modal_melting(F,bulk_ti_D):
+	cl=mantle_conc/(F+bulk_ti_D*(1-F))
+	return cl
+ti_source=[]
+ti_melt_fraction=np.linspace(0,0.4,10)
+for f in ti_melt_fraction:
+	ti_source.append(batch_modal_melting(f,0.09)*0.09)
+	
+
+ti_mg_num=[]
+for tim in ti_melt_fraction:
+	ti_mg_num.append(np.interp(tim,mf,mg_nums))
+
+
+print ti_mg_num
+for zone in ["Southern_Marianas"]:#["Southern_Marianas","South_Sandwich","West_Aleutians","Izu","South_Lesser_Antilles","Tonga","Central_Aleutians","Kermadec","New_Britain","New_Zealand","North_Vanuatu"]:
+	sub_zone="%s"%zone
+	print sub_zone
+	
+	labels=[]
+	index=1
+	samps=pet_read_in_with_labels.pet_read_in("/data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kelley/kelley_appendix_4_formatted.xls",0,sub_zone)[0]
+	one_samp={}
+	
+	
+	sample_best_f=[]
+	sample_best_ti_source=[]
+	sample_best_source_mg=[]
+	for value in samps.values():
+		
+		if value.pts["MGO(WT%)"]>6:
+		
+			katz_mg_res_fit=[]
+			ti_mg_res_fit=[]
+
+			katz_melt_f_fit=[]
+			ti_melt_f_fit=[]
+			
+			katz_mg_source_fit=[]
+			Ti_mg_source_fit=[]
+			
+			name=value.pts["Volcano"]
+			mg_residue=[]	
+			
+			F_vals=[]
+			Ti_melt_vals=[]
+	
+			for h2o in [4]:
+				for comp,source_ti in zip(ti_mg_num,ti_source):
+					katz_mg_num_residue=[]
+					Ti_mg_residue=[]
+
+					Ti_melt=[]
+					katz_melt=[]
+					for lee_comp in lee_residues:
+						PT=value.lee_pt_decimal(lee_comp,h2o,[0.15,0.15])[0]
+						P=PT[1]
+						T=PT[0]
+						if pre_P<1:
+							comp_frac=np.interp(comp,mg_num_pressures[1],mf_pressures[1])
+						elif 1<pre_P<2:
+							comp_frac_1=np.interp(comp,mg_num_pressures[1],mf_pressures[1])
+							comp_frac_2=np.interp(comp,mg_num_pressures[2],mf_pressures[2])
+							comp_frac_list=[comp_frac_1,comp_frac_2]
+							comp_frac=np.interp(P,[1,2],comp_frac_list)
+						elif 2<pre_P<3:
+							comp_frac_1=np.interp(comp,mg_num_pressures[2],mf_pressures[2])
+							comp_frac_2=np.interp(comp,mg_num_pressures[3],mf_pressures[3])
+							comp_frac_list=[comp_frac_1,comp_frac_2]
+							comp_frac=np.interp(P,[2,3],comp_frac_list)
+						elif pre_P>3:
+							comp_frac=np.interp(comp,mg_num_pressures[3],mf_pressures[3])
+		
+						cpx_mode=value.mineral_mode(comp_frac,P,"cpx")#getting modal abundance of cpx in source
+					
+						f=value.katz_mf_new(comp,cpx_mode,[T,P],h2o)
+						f=value.kelley_mf(comp,[T,P],h2o)
+						
+						final_frac=comp_frac+f
+						if P<1:
+							final_mg_num=np.interp(final_frac,mf_pressures[1],mg_num_pressures[1])
+						elif 1<P<2:
+							final_mg_num_1=np.interp(final_frac,mf_pressures[1],mg_num_pressures[1])
+							final_mg_num_2=np.interp(final_frac,mf_pressures[2],mg_num_pressures[2])
+							final_mg_list=[final_mg_num_1,final_mg_num_2]
+							final_mg_num=np.interp(P,[1,2],final_mg_list)
+						elif 2<P<3:
+							final_mg_num_1=np.interp(final_frac,mf_pressures[2],mg_num_pressures[2])
+							final_mg_num_2=np.interp(final_frac,mf_pressures[3],mg_num_pressures[3])
+							final_mg_list=[final_mg_num_1,final_mg_num_2]
+							final_mg_num=np.interp(P,[2,3],final_mg_list)
+						elif P>3:
+							final_mg_num=np.interp(final_frac,mf_pressures[3],mg_num_pressures[3])
+						katz_mg_num_residue.append(final_mg_num)
+						mg_residue.append(final_mg_num)
+						katz_melt.append(f)
+
+						ti_melt_est_vals=value.mf_non_modal_batch(lee_comp,source_ti,h2o)#getting ti estimation of melt fraction
+						ti_frac=ti_melt_est_vals[0]
+						
+						ti_f=ti_frac+comp_frac
+						
+						if P<1:
+							final_mg_num=np.interp(ti_f,mf_pressures[1],mg_num_pressures[1])
+						elif 1<P<2:
+							final_mg_num_1=np.interp(ti_f,mf_pressures[1],mg_num_pressures[1])
+							final_mg_num_2=np.interp(ti_f,mf_pressures[2],mg_num_pressures[2])
+							final_mg_list=[final_mg_num_1,final_mg_num_2]
+							final_mg_num=np.interp(P,[1,2],final_mg_list)
+						elif 2<P<3:
+							final_mg_num_1=np.interp(ti_f,mf_pressures[2],mg_num_pressures[2])
+							final_mg_num_2=np.interp(ti_f,mf_pressures[3],mg_num_pressures[3])
+							final_mg_list=[final_mg_num_1,final_mg_num_2]
+							final_mg_num=np.interp(P,[2,3],final_mg_list)
+						elif P>3:
+							final_mg_num=np.interp(ti_f,mf_pressures[3],mg_num_pressures[3])
+						Ti_melt.append(ti_frac)
+						Ti_mg_residue.append(final_mg_num)
+						#F_vals.append(f)
+						
+#					plt.plot([0.9,0.91,0.92],[0.9,0.91,0.92],"k-",label="Lee Mg# residue")
+#					plt.plot([0.9,0.91,0.92],katz_mg_num_residue,"r-")
+#					plt.xlabel("Lee input residue Mg#")
+#					plt.ylabel("Katz predicted Mg# residue")
+#					plt.title("Predicted Katz residue Mg# output from lee input, source Mg#=%s"%comp)
+#					fig1=plt.gcf()
+#					fig1.set_size_inches(24, 12)
+#					directory="figures/kelley_ti_overlap/"
+#					if not os.path.exists(directory):
+#						os.makedirs(directory)
+#					fig1.savefig("%skatz_residue_match.png"%(directory))
+#					plt.clf()
+#					plt.plot([0.9,0.91,0.92],[0.9,0.91,0.92],"k-",label="Lee Mg# residue")
+#					plt.plot([0.9,0.91,0.92],Ti_mg_residue,"r-")
+#					plt.xlabel("Lee input residue Mg#")
+#					plt.ylabel("Ti predicted Mg# residue")
+#					plt.title("Predicted Ti residue Mg# output from lee input, source Mg#=%s"%comp)
+#					fig1=plt.gcf()
+#					fig1.set_size_inches(24, 12)
+#					fig1.savefig("%sti_residue_match.png"%(directory))
+#					plt.clf()
+					#sys.exit()
+					combined_katz=[]
+					for x,y in zip(lee_residues,katz_mg_num_residue):
+						combined_katz.append((x,y))
+					combined_ti=[]
+					for x,y in zip(lee_residues,Ti_mg_residue):
+						combined_ti.append((x,y))
+					combined_lee=[]
+					for x,y in zip(lee_residues,lee_residues):
+						combined_lee.append((x,y))
+					#finding intersection
+					line1 = LineString(combined_katz)
+					line_ti = LineString(combined_ti)
+					line2 = LineString(combined_lee)
+					
+					
+					
+					#finding intersection between 
+					try:
+						ti_mg_res_fit.append(line_ti.intersection(line2).x)
+						Ti_mg_source_fit.append(comp)
+						ti_melt_f_fit.append(np.interp(line_ti.intersection(line2).x,lee_residues,Ti_melt))
+						
+					except AttributeError:
+						ti_mg_res_fit.append('nan')
+						Ti_mg_source_fit.append('nan')
+						ti_melt_f_fit.append('nan')
+					try:
+						katz_mg_res_fit.append(line1.intersection(line2).x)
+						katz_mg_source_fit.append(comp)
+						
+						katz_melt_f_fit.append(np.interp(line1.intersection(line2).x,lee_residues,katz_melt))
+					except AttributeError:
+						katz_mg_source_fit.append('nan')
+						katz_mg_res_fit.append('nan')
+						katz_melt_f_fit.append('nan')
+						#plt.show()
+					plt.clf()
+				
+				
+				plt.plot(katz_mg_source_fit,katz_melt_f_fit,"-k",label="Katz")
+				plt.plot(Ti_mg_source_fit,ti_melt_f_fit,"r-",label="Ti")
+				katz_mg_source_fit=[x for x in katz_mg_source_fit if str(x) != 'nan']
+				katz_melt_f_fit=[x for x in katz_melt_f_fit if str(x) != 'nan']
+				Ti_mg_source_fit=[x for x in Ti_mg_source_fit if str(x) != 'nan']
+				ti_melt_f_fit=[x for x in ti_melt_f_fit if str(x) != 'nan']
+				plt.xlabel("Source Mg#")
+				plt.ylabel("Katz predicted Mg# residue")
+				plt.title("Predicted Katz residue Mg# output from lee input, source Mg#=%s"%comp)
+				
+#				plt.plot(katz_mg_source_fit,katz_mg_res_fit,"-k")
+#				plt.plot(Ti_mg_source_fit,ti_mg_res_fit,"r-")
+				combined_katz=[]
+				for x,y in zip(katz_mg_source_fit,katz_melt_f_fit):
+					combined_katz.append((x,y))
+				combined_ti=[]
+				for x,y in zip(Ti_mg_source_fit,ti_melt_f_fit):
+					combined_ti.append((x,y))
+				print combined_katz,combined_ti
+				#finding intersection
+				line1 = LineString(combined_katz)
+				line_ti = LineString(combined_ti)
+#				print line_ti.intersection(line1).x
+#				print line_ti.intersection(line1).y
+#				print np.interp(line_ti.intersection(line1).x,ti_mg_num,ti_source)
+				
+				try:
+					sample_best_f.append(line_ti.intersection(line1).y)
+					sample_best_ti_source.append(np.interp(line_ti.intersection(line1).x,ti_mg_num,ti_source))
+					sample_best_source_mg.append(line_ti.intersection(line1).x)
+				except:
+					sample_best_f.append('nan')
+					sample_best_ti_source.append('nan')
+					sample_best_source_mg.append('nan')
+	plt.clf()
+	
+	plt.xlabel("Source Ti concentration required")
+	plt.ylabel("Melt fraction")
+	ax=plt.gca()
+	labels = [item.get_text() for item in ax.get_xticklabels()]
+	labels=["%s / %s ppm"%(sample_best_source_mg[i],sample_best_ti_source[i]) for i in range(len(sample_best_source_mg))]
+	
+	#ax.set_xticklabels(labels)
+	plt.plot(sample_best_ti_source,sample_best_f,'.')
+	fig1=plt.gcf()
+	fig1.set_size_inches(24, 12)
+	directory="figures/kelley_melt_inclusions_ti_overlap/"
+	if not os.path.exists(directory):
+		os.makedirs(directory)
+	fig1.savefig("%smf_vs_source_ti_required.png"%(directory))
+	plt.show()
+				
+#					for xcomp,x0 in zip(ti_mg_num,ti_source):
+#						ti_melt_est_vals=value.mf_non_modal_batch(lee_comp,x0,h2o)#getting ti estimation of melt fraction
+#						Ti_melt_vals.append(ti_melt_est_vals[0])
+					
+			
+				
+#					for ti_f,xcomp in zip(Ti_melt_vals,ti_mg_num):#looping through estimations of ti melt fractions (ti_f) and corresponding assumed source mg#
+#						#finding initial amount of melting required to produce source mg#
+#						if P<1:
+#							comp_frac=np.interp(xcomp,mg_num_pressures[1],mf_pressures[1])
+#						elif 1<P<2:
+#							comp_frac_1=np.interp(xcomp,mg_num_pressures[1],mf_pressures[1])
+#							comp_frac_2=np.interp(xcomp,mg_num_pressures[2],mf_pressures[2])
+#							comp_frac_list=[comp_frac_1,comp_frac_2]
+#							comp_frac=np.interp(P,[1,2],comp_frac_list)
+#						elif 2<P<3:
+#							comp_frac_1=np.interp(xcomp,mg_num_pressures[2],mf_pressures[2])
+#							comp_frac_2=np.interp(xcomp,mg_num_pressures[3],mf_pressures[3])
+#							comp_frac_list=[comp_frac_1,comp_frac_2]
+#							comp_frac=np.interp(P,[2,3],comp_frac_list)
+#						elif P>3:
+#							comp_frac=np.interp(xcomp,mg_num_pressures[3],mf_pressures[3])
+#						#Ti_mg_residue.append(xcomp+(1./df_dmg)*ti_f)
+#						ti_f=ti_f+comp_frac
+#						if P<1:
+#							final_mg_num=np.interp(ti_f,mf_pressures[1],mg_num_pressures[1])
+#						elif 1<P<2:
+#							final_mg_num_1=np.interp(ti_f,mf_pressures[1],mg_num_pressures[1])
+#							final_mg_num_2=np.interp(ti_f,mf_pressures[2],mg_num_pressures[2])
+#							final_mg_list=[final_mg_num_1,final_mg_num_2]
+#							final_mg_num=np.interp(P,[1,2],final_mg_list)
+#						elif 2<P<3:
+#							final_mg_num_1=np.interp(ti_f,mf_pressures[2],mg_num_pressures[2])
+#							final_mg_num_2=np.interp(ti_f,mf_pressures[3],mg_num_pressures[3])
+#							final_mg_list=[final_mg_num_1,final_mg_num_2]
+#							final_mg_num=np.interp(P,[2,3],final_mg_list)
+#						elif P>3:
+#							final_mg_num=np.interp(ti_f,mf_pressures[3],mg_num_pressures[3])
+#						Ti_mg_residue.append(final_mg_num)
+	
+	
+				
+					
+						
+
+						
+			
+#			plt.plot(ti_mg_num,Ti_melt_vals,marker=island_symbols[name],markersize=20,markerfacecolor="w")
+#			plt.plot(Ti_mg_residue,Ti_melt_vals,"--",marker=island_symbols[name],markersize=20,markerfacecolor="w")	
+#			plt.plot([0.893419654,0.899],F_vals,marker=island_symbols[name],markersize=20)
+#			print "katz",F_vals
+#			
+#		
+
+#		for col,name in zip(["k",'none'],["Full symbol - Mg#=0.90","Hollow symbol - Mg#=0.92"]):
+#			plt.scatter(0,0,label=name,marker="s",edgecolor="k",facecolors=col)
+#		for z in island_symbols.keys():
+#			plt.plot(0,0,c="k",label=z,marker=island_symbols[z],markersize=15)
+#		plt.annotate("Source" ,xy = (0.895,0.35),fontsize=20,color='k')
+#		plt.annotate("Residue" ,xy = (0.91,0.35),fontsize=20,color='k')
+#		plt.legend(numpoints=1,scatterpoints=1)
+#		plt.xlabel("Mg# source/residue",fontsize="40")
+#		plt.ylabel("Kelley melt fraction",fontsize="40")
+#		plt.tick_params(labelsize=30)
+#		plt.ylim(0,0.5)
+#		plt.xlim(0.89,0.925)
+#		plt.title("Kelley melt fraction vs source/residue Mg# all samples (Mg# residue=%s)"%lee_comp,fontsize=30)
+#		fig1=plt.gcf()
+#		fig1.set_size_inches(24, 12)
+#		directory="figures/kelley_mf/ti_and_katz/"
+#		if not os.path.exists(directory):
+#			os.makedirs(directory)
+#		fig1.savefig("%skatzf_vs_mgnum_source_%s.png"%(directory,str(lee_comp).replace(".","_")))
+#	
+#		#plt.show()
+#		plt.clf()
+

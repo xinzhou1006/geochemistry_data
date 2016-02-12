@@ -1,0 +1,12 @@
+\section{Katz/Kelley comparison}
+\begin{figure}[H]
+%/data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kelley/mf_vs_ti.py
+\includegraphics[width=0.9\textwidth]{/data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kelley/kelley_katz_comparison/figures/katz_kelley_comparison.png}
+\label{ti_resid_v_f}
+\captionsetup{singlelinecheck=off}
+\caption[]{
+\begin{itemize}
+\item Assuming 4 wt\% H2O for our samples, 0.25 fo2. 
+\end{itemize}
+}
+\end{figure}

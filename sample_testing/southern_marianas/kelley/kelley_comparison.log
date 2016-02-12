@@ -1,0 +1,909 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.16)  12 FEB 2016 14:35
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**kelley_comparison.tex
+(./kelley_comparison.tex
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 2 languages loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrartcl.cls
+Document Class: scrartcl 2013/12/19 v3.12 KOMA-Script document class (article)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2013/12/19 v3.12 KOMA-Script package (KOMA-Script-dependent b
+asics and keyval usage)
+
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2013/12/19 v3.12 KOMA-Script package (KOMA-Script-independent 
+basics and keyval usage)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2013/12/19 v3.12 KOMA-Script package (loading files)
+
+Package scrlfile, 2013/12/19 v3.12 KOMA-Script package (loading files)
+                  Copyright (C) Markus Kohm
+
+))) (/usr/share/texlive/texmf-dist/tex/latex/koma-script/tocbasic.sty
+Package: tocbasic 2013/12/19 v3.12 KOMA-Script package (handling toc-files)
+)
+Package tocbasic Info: omitting babel extension for `toc'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `toc' on input line 115.
+Package tocbasic Info: omitting babel extension for `lof'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lof' on input line 116.
+Package tocbasic Info: omitting babel extension for `lot'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lot' on input line 117.
+Class scrartcl Info: File `scrsize11pt.clo' used instead of
+(scrartcl)           file `scrsize11.clo' to setup font sizes on input line 153
+1.
+
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
+File: scrsize11pt.clo 2013/12/19 v3.12 KOMA-Script font size class option (11pt
+)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/typearea.sty
+Package: typearea 2013/12/19 v3.12 KOMA-Script package (type area)
+
+Package typearea, 2013/12/19 v3.12 KOMA-Script package (type area)
+                  Copyright (C) Frank Neukam, 1992-1994
+                  Copyright (C) Markus Kohm, 1994-
+
+\ta@bcor=\skip41
+\ta@div=\count79
+\ta@hblk=\skip42
+\ta@vblk=\skip43
+\ta@temp=\skip44
+\footheight=\skip45
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = 10
+(typearea)             BCOR = 0.0pt
+(typearea)             \paperwidth      = 597.50793pt
+(typearea)              \textwidth      = 418.25555pt
+(typearea)              DIV departure   = -6%
+(typearea)              \evensidemargin = 17.3562pt
+(typearea)              \oddsidemargin  = 17.3562pt
+(typearea)             \paperheight     = 845.04694pt
+(typearea)              \textheight     = 595.80026pt
+(typearea)              \topmargin      = -25.16531pt
+(typearea)              \headheight     = 17.0pt
+(typearea)              \headsep        = 20.40001pt
+(typearea)              \topskip        = 11.0pt
+(typearea)              \footskip       = 47.6pt
+(typearea)              \baselineskip   = 13.6pt
+(typearea)              on input line 1330.
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\abovecaptionskip=\skip46
+\belowcaptionskip=\skip47
+\c@pti@nb@sid@b@x=\box26
+\c@figure=\count86
+\c@table=\count87
+\bibindent=\dimen102
+) (/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 311.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 312.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 313.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 314.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 315.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 316.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 317.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 318.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 319.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 320.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 321.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 322.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 323.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 324.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 326.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 327.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 328.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 329.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 330.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 331.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 332.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 333.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 334.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 335.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 336.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 337.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen105
+\captionmargin@=\dimen106
+\captionwidth=\dimen107
+\caption@tempdima=\dimen108
+\caption@indent=\dimen109
+\caption@parindent=\dimen110
+\caption@hangindent=\dimen111
+)
+Package caption Info: KOMA-Script document class.
+\c@ContinuedFloat=\count89
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+\c@subfigure=\count90
+\c@subtable=\count91
+)
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip48
+\bibsep=\skip49
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count92
+)
+(/usr/share/texlive/texmf-dist/tex/latex/was/gensymb.sty
+Package: gensymb 2003/07/02 v1.0 (WaS)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks15
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip50
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen112
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen113
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count93
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count94
+\leftroot@=\count95
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count96
+\DOTSCASE@=\count97
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen114
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count98
+\c@MaxMatrixCols=\count99
+\dotsspace@=\muskip10
+\c@parentequation=\count100
+\dspbrk@lvl=\count101
+\tag@help=\toks17
+\row@=\count102
+\column@=\count103
+\maxfields@=\count104
+\andhelp@=\toks18
+\eqnshift@=\dimen115
+\alignsep@=\dimen116
+\tagshift@=\dimen117
+\tagwidth@=\dimen118
+\totwidth@=\dimen119
+\lineht@=\dimen120
+\@envbody=\toks19
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen121
+\WF@size=\dimen122
+\c@WF@wrappedlines=\count105
+\WF@box=\box29
+\WF@everypar=\toks21
+Package: wrapfig 2003/01/31  v 3.6
+)
+(/usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
+Package: appendix 2009/09/02 v1.2b extra appendix facilities
+\c@@pps=\count106
+\c@@ppsavesec=\count107
+\c@@ppsaveapp=\count108
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks22
+\verbatim@line=\toks23
+\verbatim@in@stream=\read1
+)
+(/usr/share/texlive/texmf-dist/tex/latex/import/import.sty
+Package: import 2009/03/23  v 5.1
+)
+(/usr/share/texlive/texmf-dist/tex/latex/rotating/rotating.sty
+Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count109
+\rotFPtop=\skip53
+\rotFPbot=\skip54
+\rot@float@box=\box30
+\rot@mess@toks=\toks24
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count110
+\float@exts=\toks25
+\float@box=\box31
+\@float@everytoks=\toks26
+\@floatcapt=\box32
+)
+(/home/ap4909/texmf/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count111
+\output=\toks27
+\linenoprevgraf=\count112
+\linenumbersep=\dimen123
+\linenumberwidth=\dimen124
+\c@linenumber=\count113
+\c@pagewiselinenumber=\count114
+\c@LN@truepage=\count115
+\c@internallinenumber=\count116
+\c@internallinenumbers=\count117
+\quotelinenumbersep=\dimen125
+\bframerule=\dimen126
+\bframesep=\dimen127
+\bframebox=\box33
+LaTeX Info: Redefining \\ on input line 3056.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count118
+\Gm@cntv=\count119
+\c@Gm@tempcnt=\count120
+\Gm@bindingoffset=\dimen128
+\Gm@wd@mp=\dimen129
+\Gm@odd@mp=\dimen130
+\Gm@even@mp=\dimen131
+\Gm@layoutwidth=\dimen132
+\Gm@layoutheight=\dimen133
+\Gm@layouthoffset=\dimen134
+\Gm@layoutvoffset=\dimen135
+\Gm@dimlist=\toks28
+)
+(./kelley_comparison.aux
+
+LaTeX Warning: Label `ti_resid_v_f' multiply defined.
+
+
+LaTeX Warning: Label `ti_resid_v_f' multiply defined.
+
+
+LaTeX Warning: Label `ti_resid_v_f' multiply defined.
+
+
+LaTeX Warning: Label `ti_resid_v_f' multiply defined.
+
+
+LaTeX Warning: Label `ti_resid_v_f' multiply defined.
+
+
+LaTeX Warning: Label `ti_resid_v_f' multiply defined.
+
+
+LaTeX Warning: Label `ti_resid_v_f' multiply defined.
+
+
+LaTeX Warning: Label `ti_resid_v_f' multiply defined.
+
+
+LaTeX Warning: Label `ti_resid_v_f' multiply defined.
+
+
+LaTeX Warning: Label `ti_resid_v_f' multiply defined.
+
+
+LaTeX Warning: Label `ti_resid_v_f' multiply defined.
+
+
+LaTeX Warning: Label `ti_resid_v_f' multiply defined.
+
+
+LaTeX Warning: Label `ti_resid_v_f' multiply defined.
+
+
+LaTeX Warning: Label `ti_resid_v_f' multiply defined.
+
+
+LaTeX Warning: Label `ti_resid_v_f' multiply defined.
+
+
+LaTeX Warning: Label `ti_resid_v_f' multiply defined.
+
+
+LaTeX Warning: Label `ti_resid_v_f' multiply defined.
+
+)
+\openout1 = `kelley_comparison.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 23.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 23.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count121
+\scratchdimen=\dimen136
+\scratchbox=\box34
+\nofMPsegments=\count122
+\nofMParguments=\count123
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count124
+\MPscratchDim=\dimen137
+\MPnumerator=\count125
+\makeMPintoPDFobject=\count126
+\everyMPtoPDFconversion=\toks30
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: rotating package is loaded.
+Package caption Info: wrapfig package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\symgns@font=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
+(Font)                  TS1/cmr/m/n --> TS1/cmr/bx/n on input line 23.
+Package gensymb Info: Math companion symbols declared on input line 23.
+LaTeX Info: Redefining \degree on input line 23.
+LaTeX Info: Redefining \celsius on input line 23.
+Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
+erthousand on input line 23.
+LaTeX Info: Redefining \ohm on input line 23.
+Package gensymb Info: Using \textohm for \ohm on input line 23.
+Package gensymb Info: Using \textmu for \micro on input line 23.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(90.3375pt, 416.83295pt, 90.3375pt)
+* v-part:(T,H,B)=(36.135pt, 718.57445pt, 90.3375pt)
+* \paperwidth=597.50793pt
+* \paperheight=845.04694pt
+* \textwidth=416.83295pt
+* \textheight=718.57445pt
+* \oddsidemargin=18.0675pt
+* \evensidemargin=18.0675pt
+* \topmargin=-73.535pt
+* \headheight=17.0pt
+* \headsep=20.40001pt
+* \topskip=11.0pt
+* \footskip=47.6pt
+* \marginparwidth=59.7508pt
+* \marginparsep=12.8401pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 27.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 27.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+! Too many }'s.
+\@endfloatbox ...pagefalse \outer@nobreak \egroup 
+                                                  \color@endbox 
+l.40 \end{figure}
+                 
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+! Too many }'s.
+\color@endbox ->\egroup 
+                        
+l.40 \end{figure}
+                 
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+
+! LaTeX Error: \begin{document} ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.40 \end{figure}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.40 \end{figure}
+                 
+Things are pretty mixed up, but I think the worst is over.
+
+
+</data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kell
+ey/figures/melt_fractions/mf_vs_P.png, id=1, 1553.56248pt x 820.67677pt>
+File: /data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas
+/kelley/figures/melt_fractions/mf_vs_P.png Graphic file (type png)
+
+<use /data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/
+kelley/figures/melt_fractions/mf_vs_P.png>
+Package pdftex.def Info: /data/ap4909/30.10.2013-hot_cold_geochem/sample_testin
+g/southern_marianas/kelley/figures/melt_fractions/mf_vs_P.png used on input lin
+e 43.
+(pdftex.def)             Requested size: 375.1471pt x 198.16861pt.
+
+</data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kell
+ey/figures/mf_vs_lat/dataset_comparison/Southern_Marianas.png, id=3, 1567.14342
+pt x 834.74275pt>
+File: /data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas
+/kelley/figures/mf_vs_lat/dataset_comparison/Southern_Marianas.png Graphic file
+ (type png)
+
+<use /data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/
+kelley/figures/mf_vs_lat/dataset_comparison/Southern_Marianas.png>
+Package pdftex.def Info: /data/ap4909/30.10.2013-hot_cold_geochem/sample_testin
+g/southern_marianas/kelley/figures/mf_vs_lat/dataset_comparison/Southern_Marian
+as.png used on input line 54.
+(pdftex.def)             Requested size: 375.1471pt x 199.82013pt.
+
+</data/ap4909/30.10.2013-hot_cold_geochem/mantle_temp_cals/new_correct_mg_est/s
+outh_marianas/figures/kelley_ti_overlap/mf_vs_source_ti_required.png, id=4, 173
+4.48pt x 867.24pt>
+File: /data/ap4909/30.10.2013-hot_cold_geochem/mantle_temp_cals/new_correct_mg_
+est/south_marianas/figures/kelley_ti_overlap/mf_vs_source_ti_required.png Graph
+ic file (type png)
+
+<use /data/ap4909/30.10.2013-hot_cold_geochem/mantle_temp_cals/new_correct_mg_e
+st/south_marianas/figures/kelley_ti_overlap/mf_vs_source_ti_required.png>
+Package pdftex.def Info: /data/ap4909/30.10.2013-hot_cold_geochem/mantle_temp_c
+als/new_correct_mg_est/south_marianas/figures/kelley_ti_overlap/mf_vs_source_ti
+_required.png used on input line 65.
+(pdftex.def)             Requested size: 375.1471pt x 187.56453pt.
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} </data/ap4909/30.10.2013-ho
+t_cold_geochem/sample_testing/southern_marianas/kelley/figures/melt_fractions/m
+f_vs_P.png>]
+</data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kell
+ey/figures/melt_fractions/mf_diff_vs_P.png, id=20, 1588.96994pt x 834.74275pt>
+File: /data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas
+/kelley/figures/melt_fractions/mf_diff_vs_P.png Graphic file (type png)
+
+<use /data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/
+kelley/figures/melt_fractions/mf_diff_vs_P.png>
+Package pdftex.def Info: /data/ap4909/30.10.2013-hot_cold_geochem/sample_testin
+g/southern_marianas/kelley/figures/melt_fractions/mf_diff_vs_P.png used on inpu
+t line 82.
+(pdftex.def)             Requested size: 375.1471pt x 197.08165pt.
+
+</data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kell
+ey/figures/melt_fractions/mf_diff_vs_P_with_cpx_out.png, id=21, 1594.79033pt x 
+834.74275pt>
+File: /data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas
+/kelley/figures/melt_fractions/mf_diff_vs_P_with_cpx_out.png Graphic file (type
+ png)
+
+<use /data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/
+kelley/figures/melt_fractions/mf_diff_vs_P_with_cpx_out.png>
+Package pdftex.def Info: /data/ap4909/30.10.2013-hot_cold_geochem/sample_testin
+g/southern_marianas/kelley/figures/melt_fractions/mf_diff_vs_P_with_cpx_out.png
+ used on input line 90.
+(pdftex.def)             Requested size: 375.1471pt x 196.35562pt.
+ [2 </data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/
+kelley/figures/mf_vs_lat/dataset_comparison/Southern_Marianas.png> </data/ap490
+9/30.10.2013-hot_cold_geochem/mantle_temp_cals/new_correct_mg_est/south_mariana
+s/figures/kelley_ti_overlap/mf_vs_source_ti_required.png>]
+</data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kell
+ey/figures/melt_fractions/katz_mf_diff_vs_P_with_cpx_out.png, id=28, 1588.96994
+pt x 834.74275pt>
+File: /data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas
+/kelley/figures/melt_fractions/katz_mf_diff_vs_P_with_cpx_out.png Graphic file 
+(type png)
+
+<use /data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/
+kelley/figures/melt_fractions/katz_mf_diff_vs_P_with_cpx_out.png>
+Package pdftex.def Info: /data/ap4909/30.10.2013-hot_cold_geochem/sample_testin
+g/southern_marianas/kelley/figures/melt_fractions/katz_mf_diff_vs_P_with_cpx_ou
+t.png used on input line 100.
+(pdftex.def)             Requested size: 375.1471pt x 197.08165pt.
+
+</data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kell
+ey/figures/melt_fractions/katz_mf_diff_vs_P_with_cpx_out_without_southern_sampl
+es.png, id=29, 1656.3896pt x 834.74275pt>
+File: /data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas
+/kelley/figures/melt_fractions/katz_mf_diff_vs_P_with_cpx_out_without_southern_
+samples.png Graphic file (type png)
+
+<use /data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/
+kelley/figures/melt_fractions/katz_mf_diff_vs_P_with_cpx_out_without_southern_s
+amples.png>
+Package pdftex.def Info: /data/ap4909/30.10.2013-hot_cold_geochem/sample_testin
+g/southern_marianas/kelley/figures/melt_fractions/katz_mf_diff_vs_P_with_cpx_ou
+t_without_southern_samples.png used on input line 109.
+(pdftex.def)             Requested size: 375.1471pt x 189.05725pt.
+
+</data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kell
+ey/figures/melt_fractions/thermo_mf_vs_P_katz_comparison.png, id=30, 1553.56248
+pt x 820.67677pt>
+File: /data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas
+/kelley/figures/melt_fractions/thermo_mf_vs_P_katz_comparison.png Graphic file 
+(type png)
+
+<use /data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/
+kelley/figures/melt_fractions/thermo_mf_vs_P_katz_comparison.png>
+Package pdftex.def Info: /data/ap4909/30.10.2013-hot_cold_geochem/sample_testin
+g/southern_marianas/kelley/figures/melt_fractions/thermo_mf_vs_P_katz_compariso
+n.png used on input line 118.
+(pdftex.def)             Requested size: 375.1471pt x 198.16861pt.
+ [3 </data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/
+kelley/figures/melt_fractions/mf_diff_vs_P.png> </data/ap4909/30.10.2013-hot_co
+ld_geochem/sample_testing/southern_marianas/kelley/figures/melt_fractions/mf_di
+ff_vs_P_with_cpx_out.png> </data/ap4909/30.10.2013-hot_cold_geochem/sample_test
+ing/southern_marianas/kelley/figures/melt_fractions/katz_mf_diff_vs_P_with_cpx_
+out.png>]
+</data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kell
+ey/figures/h2o_evaluation_Southern_Marianas.png, id=37, 919.1386pt x 909.92296p
+t>
+File: /data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas
+/kelley/figures/h2o_evaluation_Southern_Marianas.png Graphic file (type png)
+
+<use /data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/
+kelley/figures/h2o_evaluation_Southern_Marianas.png>
+Package pdftex.def Info: /data/ap4909/30.10.2013-hot_cold_geochem/sample_testin
+g/southern_marianas/kelley/figures/h2o_evaluation_Southern_Marianas.png used on
+ input line 129.
+(pdftex.def)             Requested size: 375.1471pt x 371.37694pt.
+
+</data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kell
+ey/figures/katz_kelley_base_comparison.png, id=38, 1268.84778pt x 780.41899pt>
+File: /data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas
+/kelley/figures/katz_kelley_base_comparison.png Graphic file (type png)
+
+<use /data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/
+kelley/figures/katz_kelley_base_comparison.png>
+Package pdftex.def Info: /data/ap4909/30.10.2013-hot_cold_geochem/sample_testin
+g/southern_marianas/kelley/figures/katz_kelley_base_comparison.png used on inpu
+t line 138.
+(pdftex.def)             Requested size: 375.1471pt x 230.73366pt.
+ [4 </data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/
+kelley/figures/melt_fractions/katz_mf_diff_vs_P_with_cpx_out_without_southern_s
+amples.png> </data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_m
+arianas/kelley/figures/melt_fractions/thermo_mf_vs_P_katz_comparison.png>]
+</data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kell
+ey/figures/t_minus_t_dry_sol_vs_P.png, id=44, 870.1502pt x 843.95839pt>
+File: /data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas
+/kelley/figures/t_minus_t_dry_sol_vs_P.png Graphic file (type png)
+
+<use /data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/
+kelley/figures/t_minus_t_dry_sol_vs_P.png>
+Package pdftex.def Info: /data/ap4909/30.10.2013-hot_cold_geochem/sample_testin
+g/southern_marianas/kelley/figures/t_minus_t_dry_sol_vs_P.png used on input lin
+e 148.
+(pdftex.def)             Requested size: 375.1471pt x 363.86087pt.
+ [5 </data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/
+kelley/figures/h2o_evaluation_Southern_Marianas.png> </data/ap4909/30.10.2013-h
+ot_cold_geochem/sample_testing/southern_marianas/kelley/figures/katz_kelley_bas
+e_comparison.png>]
+(./kelley_katz_comparison/katz_kelley_comparison.tex
+</data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kell
+ey/kelley_katz_comparison/figures/katz_kelley_comparison.png, id=50, 1228.59pt 
+x 758.59248pt>
+File: /data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas
+/kelley/kelley_katz_comparison/figures/katz_kelley_comparison.png Graphic file 
+(type png)
+
+<use /data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/
+kelley/kelley_katz_comparison/figures/katz_kelley_comparison.png>
+Package pdftex.def Info: /data/ap4909/30.10.2013-hot_cold_geochem/sample_testin
+g/southern_marianas/kelley/kelley_katz_comparison/figures/katz_kelley_compariso
+n.png used on input line 4.
+(pdftex.def)             Requested size: 375.1471pt x 231.6308pt.
+
+</data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kell
+ey/kelley_katz_comparison/figures/melt_fractions/katz_kelley_mf_vs_P.png, id=51
+, 1588.96994pt x 834.74275pt>
+File: /data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas
+/kelley/kelley_katz_comparison/figures/melt_fractions/katz_kelley_mf_vs_P.png G
+raphic file (type png)
+
+<use /data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/
+kelley/kelley_katz_comparison/figures/melt_fractions/katz_kelley_mf_vs_P.png>
+Package pdftex.def Info: /data/ap4909/30.10.2013-hot_cold_geochem/sample_testin
+g/southern_marianas/kelley/kelley_katz_comparison/figures/melt_fractions/katz_k
+elley_mf_vs_P.png used on input line 16.
+(pdftex.def)             Requested size: 375.1471pt x 197.08165pt.
+
+</data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kell
+ey/kelley_katz_comparison/figures/melt_fractions/katz_kelley_mf_vs_P_no_katz_cp
+x_out.png, id=52, 1588.96994pt x 834.74275pt>
+File: /data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas
+/kelley/kelley_katz_comparison/figures/melt_fractions/katz_kelley_mf_vs_P_no_ka
+tz_cpx_out.png Graphic file (type png)
+
+<use /data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/
+kelley/kelley_katz_comparison/figures/melt_fractions/katz_kelley_mf_vs_P_no_kat
+z_cpx_out.png>
+Package pdftex.def Info: /data/ap4909/30.10.2013-hot_cold_geochem/sample_testin
+g/southern_marianas/kelley/kelley_katz_comparison/figures/melt_fractions/katz_k
+elley_mf_vs_P_no_katz_cpx_out.png used on input line 34.
+(pdftex.def)             Requested size: 375.1471pt x 197.08165pt.
+ [6 </data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/
+kelley/figures/t_minus_t_dry_sol_vs_P.png> </data/ap4909/30.10.2013-hot_cold_ge
+ochem/sample_testing/southern_marianas/kelley/kelley_katz_comparison/figures/ka
+tz_kelley_comparison.png>]
+</data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kell
+ey/kelley_katz_comparison/figures/melt_fractions/katz_kelley_mf_vs_t_minus_tsol
+.png, id=58, 1593.33524pt x 834.74275pt>
+File: /data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas
+/kelley/kelley_katz_comparison/figures/melt_fractions/katz_kelley_mf_vs_t_minus
+_tsol.png Graphic file (type png)
+
+<use /data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/
+kelley/kelley_katz_comparison/figures/melt_fractions/katz_kelley_mf_vs_t_minus_
+tsol.png>
+Package pdftex.def Info: /data/ap4909/30.10.2013-hot_cold_geochem/sample_testin
+g/southern_marianas/kelley/kelley_katz_comparison/figures/melt_fractions/katz_k
+elley_mf_vs_t_minus_tsol.png used on input line 46.
+(pdftex.def)             Requested size: 375.1471pt x 196.53395pt.
+ [7 </data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/
+kelley/kelley_katz_comparison/figures/melt_fractions/katz_kelley_mf_vs_P.png> <
+/data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kelle
+y/kelley_katz_comparison/figures/melt_fractions/katz_kelley_mf_vs_P_no_katz_cpx
+_out.png>])
+</data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kell
+ey/figures/melt_fractions/na2o_vs_tio2.png, id=65, 1504.5741pt x 834.25772pt>
+File: /data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas
+/kelley/figures/melt_fractions/na2o_vs_tio2.png Graphic file (type png)
+
+<use /data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/
+kelley/figures/melt_fractions/na2o_vs_tio2.png>
+Package pdftex.def Info: /data/ap4909/30.10.2013-hot_cold_geochem/sample_testin
+g/southern_marianas/kelley/figures/melt_fractions/na2o_vs_tio2.png used on inpu
+t line 159.
+(pdftex.def)             Requested size: 375.1471pt x 208.0038pt.
+
+</data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kell
+ey/ti_melt_uncertainties/figures/ti_mf_vs_h2o.png, id=66, 1511.8496pt x 824.072
+pt>
+File: /data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas
+/kelley/ti_melt_uncertainties/figures/ti_mf_vs_h2o.png Graphic file (type png)
+
+<use /data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/
+kelley/ti_melt_uncertainties/figures/ti_mf_vs_h2o.png>
+Package pdftex.def Info: /data/ap4909/30.10.2013-hot_cold_geochem/sample_testin
+g/southern_marianas/kelley/ti_melt_uncertainties/figures/ti_mf_vs_h2o.png used 
+on input line 168.
+(pdftex.def)             Requested size: 375.1471pt x 204.48343pt.
+ (./kelley_comparison.bbl [8 </data/ap4909/30.10.2013-hot_cold_geochem/sample_t
+esting/southern_marianas/kelley/kelley_katz_comparison/figures/melt_fractions/k
+atz_kelley_mf_vs_t_minus_tsol.png> </data/ap4909/30.10.2013-hot_cold_geochem/sa
+mple_testing/southern_marianas/kelley/figures/melt_fractions/na2o_vs_tio2.png>]
+) [9 </data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas
+/kelley/ti_melt_uncertainties/figures/ti_mf_vs_h2o.png>] (./kelley_comparison.a
+ux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 6757 strings out of 495028
+ 112186 string characters out of 6181496
+ 205599 words of memory out of 5000000
+ 9825 multiletter control sequences out of 15000+600000
+ 12127 words of font info for 45 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 47i,7n,46p,461b,404s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/ap4909/.texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0800.600pk> </home/
+ap4909/.texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pf
+b>
+Output written on kelley_comparison.pdf (9 pages, 3616483 bytes).
+PDF statistics:
+ 115 PDF objects out of 1000 (max. 8388607)
+ 58 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+
