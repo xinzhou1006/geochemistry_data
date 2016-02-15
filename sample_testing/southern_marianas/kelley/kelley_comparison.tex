@@ -34,21 +34,10 @@
 \section{Melt fraction calculations}
 \begin{itemize}
 \item Based on TiO$_2$/Y ratios, choose a source TiO$_2$ concentration of 0.123wt\%, slightly more depleted than DMM.
-\item As do not know pre-eruptive H\textsubscript{2}O in our samples, there is uncertainty in melt fractions. See figure 
+\item As do not know pre-eruptive H\textsubscript{2}O in our samples, there is uncertainty in melt fractions. See figure \ref{h2o_effect_mf}. This is minor - 2\% melt fraction increase between 0 and 8 wt\% H$_2$O.
+\item Melt fraction differences calculated using Kelley thermobarometry and Ti have significant differences, when calculated on sample by sample basis.
+\item Inclusion of cpx-out from \cite{katz2003} allows reconciliation within \pm 5\% melt fraction (figure \ref{mf_diff_cpx_out})
 \end{itemize}
-
-
-
-%/data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kelley/mf_vs_ti.py
-\includegraphics[width=0.9\textwidth]{/data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kelley/figures/melt_fractions/mf_vs_P.png}
-\label{ti_resid_v_f}
-\captionsetup{singlelinecheck=off}
-\caption[]{
-\begin{itemize}
-\item Assuming 4 wt\% H2O for our samples, 0.123wt\% mantle source Ti, 0.25 fo2.
-\end{itemize}
-}
-\end{figure}
 \begin{figure}[H]
 %/data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kelley/mf_vs_ti.py
 \includegraphics[width=0.9\textwidth]{/data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kelley/figures/mf_vs_lat/dataset_comparison/Southern_Marianas.png}
@@ -58,6 +47,15 @@
 \begin{itemize}
 \item Assuming 4 wt\% H2O for our samples, 0.123wt\% mantle source Ti, 0.25 fo2. 
 \end{itemize}
+}
+\end{figure}
+\begin{figure}[H]
+%/data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kelley/mf_vs_ti.py
+\includegraphics[width=0.9\textwidth]{/data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kelley/figures/melt_fractions/mf_diff_vs_P_with_cpx_out.png}
+\label{mf_diff_cpx_out}
+\captionsetup{singlelinecheck=off}
+\caption[]{
+
 }
 \end{figure}
 \begin{figure}[H]
@@ -85,34 +83,9 @@
 \caption[]{
 }
 \end{figure}
-\begin{figure}[H]
-%/data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kelley/mf_vs_ti.py
-\includegraphics[width=0.9\textwidth]{/data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kelley/figures/melt_fractions/mf_diff_vs_P_with_cpx_out.png}
-\label{ti_resid_v_f}
-\captionsetup{singlelinecheck=off}
-\caption[]{
 
-}
-\end{figure}
 
-\begin{figure}[H]
-%/data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kelley/mf_vs_ti.py
-\includegraphics[width=0.9\textwidth]{/data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kelley/figures/melt_fractions/katz_mf_diff_vs_P_with_cpx_out.png}
-\label{ti_resid_v_f}
-\captionsetup{singlelinecheck=off}
-\caption[]{
 
-}
-\end{figure}
-\begin{figure}[H]
-%/data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kelley/mf_vs_ti.py
-\includegraphics[width=0.9\textwidth]{/data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kelley/figures/melt_fractions/katz_mf_diff_vs_P_with_cpx_out_without_southern_samples.png}
-\label{ti_resid_v_f}
-\captionsetup{singlelinecheck=off}
-\caption[]{
-
-}
-\end{figure}
 \begin{figure}[H]
 %/data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kelley/mf_vs_ti.py
 \includegraphi
@@ -173,7 +146,7 @@ cs[width=0.9\textwidth]{/data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/
 \begin{itemize}
 \item Changing H$_2$O from 0-8 wt\% results in around 2\% melt increase.
 \end{itemize}
-
+\label{h2o_effect_mf}
 }
 \end{figure}
 \begin{comment}
@@ -186,6 +159,35 @@ cs[width=0.9\textwidth]{/data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/
 \begin{itemize}
 \item Assuming 4 wt\% H2O for our samples, 0.123wt\% mantle source Ti, 0.25 fo2.
 \end{itemize}
+}
+\end{figure}
+\begin{figure}
+%/data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kelley/mf_vs_ti.py
+\includegraphics[width=0.9\textwidth]{/data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kelley/figures/melt_fractions/mf_vs_P.png}
+\label{ti_resid_v_f}
+\captionsetup{singlelinecheck=off}
+\caption[]{
+\begin{itemize}
+\item Assuming 4 wt\% H2O for our samples, 0.123wt\% mantle source Ti, 0.25 fo2.
+\end{itemize}
+}
+\end{figure}
+\begin{figure}[H]
+%/data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kelley/mf_vs_ti.py
+\includegraphics[width=0.9\textwidth]{/data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kelley/figures/melt_fractions/katz_mf_diff_vs_P_with_cpx_out.png}
+\label{ti_resid_v_f}
+\captionsetup{singlelinecheck=off}
+\caption[]{
+
+}
+\end{figure}
+\begin{figure}[H]
+%/data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kelley/mf_vs_ti.py
+\includegraphics[width=0.9\textwidth]{/data/ap4909/30.10.2013-hot_cold_geochem/sample_testing/southern_marianas/kelley/figures/melt_fractions/katz_mf_diff_vs_P_with_cpx_out_without_southern_samples.png}
+\label{ti_resid_v_f}
+\captionsetup{singlelinecheck=off}
+\caption[]{
+
 }
 \end{figure}
 \end{comment}
